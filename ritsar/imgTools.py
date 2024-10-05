@@ -638,7 +638,7 @@ def FFBP(phs, platform, img_plane, N=3, derate = 1.05, taylor = 20, n = 32, beta
         
             #Derive parameters
             img_plane_sub = dict(img_planeDS)
-            full_size = np.array([v.size, u.size], dtype = np.int)
+            full_size = np.array([v.size, u.size], dtype = int)
             sub_size = np.array(full_size/2, dtype = int)
             img_FFBP = np.zeros(full_size)
         
@@ -696,7 +696,7 @@ def FFBP(phs, platform, img_plane, N=3, derate = 1.05, taylor = 20, n = 32, beta
     n_img = image_number-1
     
     #Derive parameters
-    full_size = np.array([v.size, u.size], dtype = np.int)
+    full_size = np.array([v.size, u.size], dtype = int)
     sub_size = np.array(full_size/(2**N), dtype = int)
     img_FFBP = np.zeros(full_size)
     
@@ -755,7 +755,7 @@ def FFBPmp(phs, platform, img_plane, N=3, derate = 1.05, taylor = 20, n = 32, be
     
     #Derive parameters
     img_plane_sub = dict(img_plane)
-    full_size = np.array([v.size, u.size], dtype = np.int)
+    full_size = np.array([v.size, u.size], dtype = int)
     sub_size = np.array(full_size/2, dtype = int)
     img_FFBP = np.zeros(full_size)
     
@@ -816,7 +816,7 @@ def FFBPmp(phs, platform, img_plane, N=3, derate = 1.05, taylor = 20, n = 32, be
     output = [p.get() for p in results]
     
     #Derive parameters
-    full_size = np.array([v.size, u.size], dtype = np.int)
+    full_size = np.array([v.size, u.size], dtype = int)
     sub_size = np.array(full_size/2, dtype = int)
     img_FFBP = np.zeros(full_size)
     

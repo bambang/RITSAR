@@ -173,7 +173,7 @@ def decimate(x, q, n=None, axis=-1, beta = None, cutoff = 'nyq'):
     padlen = n//2
     
     if cutoff == 'nyq':
-        eps = np.finfo(np.float).eps
+        eps = np.finfo(float).eps
         cutoff = 1.-eps
     
     window = ('kaiser', beta)
@@ -184,4 +184,4 @@ def decimate(x, q, n=None, axis=-1, beta = None, cutoff = 'nyq'):
     
     sl = [slice(None)] * y.ndim
     sl[axis] = slice(None, None, q)
-    return y[sl]
+    return y[tuple(sl)]
