@@ -20,7 +20,19 @@ Once you've ensured the required libraries are up-to-date, download the zip file
 
 $ cd \<ritsar_dir\>
 
+The usage of the following lines is deprecated:
+
 $ python setup.py install
+
+You should use the following instead:
+
+$ pip install .
+
+or 
+
+$ pip install -e .
+
+If you want to install in edit mode
 
 then...
 
